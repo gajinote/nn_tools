@@ -19,8 +19,9 @@ LABELS = [
 'aeroplane','bicycle','bird','boat','bottle','bus','car','cat','chair','cow',
 'diningtable','dog','horse','motorbike','person','pottedplant','sheep','sofa','train','tvmonitor']
 
-parser = argparse.ArgumentParser()
-args = parser.parse_args()
 
 if __name__ == '__main__':
-  print(args)
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--model", default="./models/yolov5s.pt")
+  args = parser.parse_args()
+  print("model path is", args.model)
